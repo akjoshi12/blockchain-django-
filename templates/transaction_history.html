@@ -1,0 +1,76 @@
+{%extends 'base.html'%}
+{%block title %} transaction History {%endblock title%}
+{% block body %}
+<div>
+    <div>
+        <h1>Recent Blocks</h1>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Block no</th>
+        <th scope="col">Nonce</th>
+        <th scope="col">Merkle Root</th>
+        <th scope="col">Previous hash</th>
+        <th scope="col">Final hash</th>
+        <th scope="col">Time stamp</th>
+
+      </tr>
+    </thead>
+    <tbody>
+         
+            {% for i in blkdetails %}
+            <tr> 
+            <th scope="row">{{ i.block }}</th>
+            <td>{{ i.nonce }}</td>
+            <td>{{ i.merkleroot }}</td>
+            <td>{{ i.previous_hash }}</td>
+            <td>{{ i.finalhash }}</td>
+            <td>{{ i.timestamp }}</td>
+            </tr>
+            {% endfor %}
+        </th>
+        <!-- <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td> -->
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div>
+    <h1>Recent Transactions</h1>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">block_no</th>
+            <th scope="col">Reciever Public key</th>
+            <th scope="col">Sender public key</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Current hash</th>
+            <th scope="col">Timestamp</th>
+            
+    
+          </tr>
+        </thead>
+        <tbody>
+          <tr>        
+                {% for i in transdetails %}
+                <tr>
+                <th scope="row">{{ i.block_no }}</th>
+                <td>{{ i.r_pub }}</td>
+                <td>{{ i.s_pub }}</td>
+                <td>{{ i.amount }}</td>
+                <td>{{ i.current_hash }}</td>
+                <td>{{ i.timestamp }}</td>
+              </tr>
+                {%endfor%}
+            </th>
+            <!-- <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td> -->
+          </tr>
+        </tbody>
+      </table>
+
+</div>
+</div>
+{% endblock body %}

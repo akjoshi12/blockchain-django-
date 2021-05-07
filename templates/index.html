@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% block title %}
+Home
+{% endblock title%}
+{% block body %}
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Blockbank</h1>
+      <p class="lead">Privacy is not an option, and it shouldn’t be the price we accept for just getting on the internet</p>
+    </div>
+  </div>
+  <div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="d-flex justify-content-center">
+            <img class="d-block w-50 p-3" src="https://source.unsplash.com/1200x500/?Blockchain" alt="First slide" height="150" width="100">
+            </div>
+        </div>
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+            <img class="d-block  w-50 p-3" src="https://source.unsplash.com/1200x500/?computer" alt="Second slide" height="150" width="100">
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+            <img class="d-block  w-50 p-3" src="https://source.unsplash.com/1200x500/?cryptocurrency" alt="Third slide" height="150" width="100">
+            </div>
+        </div>
+    </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+</div>
+  <section class="text-gray-700 body-font">
+    <div class="container px-5 py-24 mx-auto flex flex-col">
+      <div class="lg:w-4/6 mx-auto">
+        <!-- <div class="rounded-lg h-64 overflow-hidden">
+          <img alt="content" class="object-cover object-center h-full w-full" src="https://source.unsplash.com/1200x500/?Blockchain
+  ">
+        </div> -->
+        <div class="flex flex-col sm:flex-row mt-10">
+          <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
+            <div class="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400">
+              <svg fill="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.npr.org%2Fsections%2Falltechconsidered%2F2014%2F03%2F07%2F287265490%2Fwhy-all-this-fuss-over-satoshi-nakamoto-is-a-boost-for-bitcoin&psig=AOvVaw2HY_93msCu3yzdoIcAHWpW&ust=1620455263029000&source=images&cd=vfe&ved=0CAMQjB1qFwoTCICUlbj4tvACFQAAAAAdAAAAABAD" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <div class="flex flex-col items-center text-center justify-center">
+              <h2 class="font-medium title-font mt-4 text-gray-900 text-lg">Satoshi Nakomoto</h2>
+              <div class="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div>
+              <p class="text-base text-gray-600">Satoshi Nakamoto is the name used by the presumed pseudonymous person or persons who developed bitcoin, authored the bitcoin white paper, and created and deployed bitcoin's original reference implementation. As part of the implementation, Nakamoto also devised the first blockchain database..</p>
+            </div>
+          </div>
+          <div class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-300 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
+            <p class="leading-relaxed text-lg mb-4"><h4> What is Blockchain</h4><br> A blockchain,originally block chain,is a growing list of records, called blocks, that are linked using cryptography. Each block contains a cryptographic hash of the previous block, a timestamp, and transaction data (generally represented as a Merkle tree).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon:after
+    {
+      content: '>';
+      font-size: 55px;
+      color: black;
+    }
+    .carousel-control-prev-icon:after {
+      content: '<';
+      font-size: 55px;
+      color: black;
+    }
+        .navhead
+        {
+            color: white;
+            text-align: center; 
+            width: 75%;   
+        }
+    </style>
+{% endblock body %}
